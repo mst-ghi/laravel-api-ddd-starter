@@ -9,16 +9,14 @@
     "license": "MIT",
     "require": {
         "php": "^7.4|^8.0",
+        "darkaonline/l5-swagger": "^8.0",
         "fideloper/proxy": "^4.2",
         "firebase/php-jwt": "^5.4",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",
         "hekmatinasser/verta": "^1.12",
         "laravel/framework": "^8.54",
-        "laravel/tinker": "^2.5",
-        "ext-http": "*",
-        "ext-json": "*",
-        "ext-pdo": "*"
+        "laravel/tinker": "^2.5"
     },
     "require-dev": {
         "facade/ignition": "^2.5",
@@ -70,12 +68,16 @@
         "post-create-project-cmd": [
             "@php artisan key:generate --ansi"
         ],
+        "api-docx": [
+            "@php artisan l5-swagger:generate --ansi"
+        ],
         "fresh": [
             "composer dump-autoload -o",
             "@php artisan config:clear --ansi",
             "@php artisan config:cache --ansi",
             "@php artisan migrate:fresh --ansi",
-            "@php artisan db:seed --ansi"
+            "@php artisan db:seed --ansi",
+            "@php artisan l5-swagger:generate --ansi"
         ]
     }
 }

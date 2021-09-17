@@ -1,0 +1,23 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "My First API test",
+        "version": "1"
+    },
+    "paths": {
+        "api/test": {
+            "get": {
+                "description": "Home page",
+                "operationId": "1b134dc9ae471cfd010fc5b0386bc12e",
+                "responses": {
+                    "default": {
+                        "description": "Test api"
+                    }
+                }
+            }
+        }
+    },
+    "security": [
+        []
+    ]
+}
